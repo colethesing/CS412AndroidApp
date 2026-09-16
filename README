@@ -1,0 +1,17 @@
+# CS412 Android App — Assignment 2
+
+## Description
+This app demonstrates explicit and implicit intents between two activities.
+
+- **MainActivity**: Displays the student's name and ID, with two buttons to launch SecondActivity (one explicit, one implicit).
+- **SecondActivity**: Displays a list of mobile software engineering challenges, with a button to return to MainActivity.
+
+## Testing Environment
+- Pixel 8
+- Android 17.0
+
+## How to Run
+1. Open the project in Android Studio.
+2. Build and run on the emulator/device listed above.
+3. Tap either button on the main screen to navigate to the second activity.
+4. Tap "Main Activity" to return.
