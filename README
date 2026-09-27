@@ -1,4 +1,8 @@
-# CS412 Android App — Assignment 2
+# CS412 Android App
+## Assignment 3 Additions
+- Added 'MyForegroundService' : Service that gives a notification when started and supports binding to retrieve grade
+- Added 'MyBroadcastReciever' : registered in 'MainActivity.onStart()' and unregistered in 'onStop()' Listens for custom action 'com.example.MY_ACTION' and shows toast notification
+- MainActivity has 3 new buttons: Start Service, Bind Service, and Send Broadcast
 
 ## Testing Environment
 - Pixel 8
@@ -9,3 +13,6 @@
 2. Build and run on the emulator/device listed above.
 3. Tap either button on the main screen to navigate to the second activity.
 4. Tap "Main Activity" to return.
+5. Tap "Start Service" to start the foreground service. A notification will appear in the notification section
+6. Tap "Bind Service" to bind the service; the grade will be returned to the right of the button
+7. Tap "Send Broadcast" to send a custom broadcast; A toast message will show on the bottom of the screen
