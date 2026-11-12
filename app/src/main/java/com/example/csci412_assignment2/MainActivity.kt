@@ -91,7 +91,11 @@ class MainActivity : ComponentActivity() {
                             val intent = Intent("com.example.MY_ACTION")
                             intent.setPackage(packageName)
                             sendBroadcast(intent)
+                        },
+                        onViewImageClick = {
+                            startActivity(Intent(this, ThirdActivity::class.java))
                         }
+
                     )
                 }
             }
@@ -129,7 +133,8 @@ fun MainScreen(
     onImplicitClick: () -> Unit = {},
     onStartServiceClick: () -> Unit = {},
     onBindServiceClick: () -> Unit = {},
-    onSendBroadcastClick: () -> Unit = {}
+    onSendBroadcastClick: () -> Unit = {},
+    onViewImageClick: () -> Unit = {}
 ) {
     Surface(color = Color.White, modifier = modifier.fillMaxSize()) {
         Column(
@@ -157,6 +162,9 @@ fun MainScreen(
                 }
                 Button(onClick = onSendBroadcastClick, modifier = Modifier.padding(top = 12.dp)) {
                     Text("Send Broadcast")
+                }
+                Button(onClick = onViewImageClick, modifier = Modifier.padding(top = 12.dp)){
+                    Text("View Image Activity")
                 }
             }
         }
